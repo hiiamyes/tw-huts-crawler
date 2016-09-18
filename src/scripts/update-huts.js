@@ -21,7 +21,7 @@ co(function* (){
 
   yield require('../libs/national-park/huts.json').map( hut => updateDB(db, hut) );
   yield require('../libs/yushan/huts.json').map( hut => updateDB(db, hut) );
-  yield require('../libs/tianchi/huts.json').map( hut => updateDB(db, hut) );
+  yield require('../libs/tconline/huts.json').map( hut => updateDB(db, hut) );
   yield require('../libs/kgonline/huts.json').map( hut => updateDB(db, hut) );
   yield require('../libs/jmlnt/huts.json').map( hut => updateDB(db, hut) );
 

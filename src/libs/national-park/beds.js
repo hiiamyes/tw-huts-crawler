@@ -4,11 +4,15 @@ let co = require('co');
 let async = require('asyncawait/async');
 let await = require('asyncawait/await');
 let rp = require('request-promise');
+let _ = require('lodash');
 
-const getASPState = (url) => {
+const huts = _.keyBy(require('./huts.json'), 'name');
+
+const getASPState = (name) => {
+  const uri = huts[name].url;
   return new Promise( (resolve, reject) => {
     rp({
-      url,
+      uri,
       transform: body => cheerio.load(body)
     })
     .then( $ => {
@@ -20,7 +24,9 @@ const getASPState = (url) => {
   })
 }
 
-const getBedStatus = ({ASPState, url, room, monthOffset}) => {
+const getBedStatus = ({ASPState, name, monthOffset}) => {
+  const uri = huts[name].url;
+  const rooms = huts[name].rooms;
   return new Promise( (resolve, reject) => {
 
     let date = monthOffset ? {
@@ -31,9 +37,9 @@ const getBedStatus = ({ASPState, url, room, monthOffset}) => {
     } : {};
 
     rp.post({
-      url,
+      uri,
       form: Object.assign({}, ASPState, date, {
-        ctl00$ContentPlaceHolder1$rooms: room,
+        ctl00$ContentPlaceHolder1$rooms: rooms,
         ctl00$ScriptManager1: 'ctl00$ScriptManager1|ctl00$ContentPlaceHolder1$btnsearch',
         ctl00$ContentPlaceHolder1$btnsearch: '查詢'
       }),
@@ -63,7 +69,7 @@ const parser = ($) => {
         const waiting = parseInt($(`#ContentPlaceHolder1_cc_${indexString} a span:nth-of-type(2)`).text());
         const applying = parseInt($(`#ContentPlaceHolder1_cc_${indexString} a span:nth-of-type(3)`).text());
         beds.push({
-          date: moment.utc(`${parseInt(year) + 1911}-${month}-${day}`).format(),
+          date: moment(`${parseInt(year) + 1911}-${month}-${day}`).format('YYYY-MM-DD'),
           remaining,
           applying: waiting + applying,
           isDrawn: true,
@@ -74,10 +80,10 @@ const parser = ($) => {
   })
 }
 
-const getBeds = async ((url, room) => {
-  let ASPState = await (getASPState(url));
-  let thisMonth = await (getBedStatus({ASPState, url, room, monthOffset: 0}));
-  let nextMonth = await (getBedStatus({ASPState: thisMonth.ASPState, url, room, monthOffset: 1}))
+const getBeds = async ((name) => {
+  let ASPState = await (getASPState(name));
+  let thisMonth = await (getBedStatus({ASPState, name, monthOffset: 0}));
+  let nextMonth = await (getBedStatus({ASPState: thisMonth.ASPState, name, monthOffset: 1}))
   thisMonthBeds = await (parser(thisMonth.$));
   nextMonthBeds = await (parser(nextMonth.$));
   return thisMonthBeds.concat(nextMonthBeds);

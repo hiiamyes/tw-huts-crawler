@@ -4,7 +4,7 @@ let co = require('co');
 let rp = require('request-promise');
 let _ = require('lodash');
 
-const huts = _.keyBy(require('./huts.json'), 'nameZh');
+const huts = _.keyBy(require('./huts.json'), 'name');
 
 const getBeds = co.wrap(function* (name) {
 
@@ -30,7 +30,7 @@ const getBeds = co.wrap(function* (name) {
     reApplying = new RegExp(/向陽山屋[^目]*目前報名 : (\d*)/);
     break;
   case '向陽營地':
-    reRemaining = new RegExp(/向陽營地[^營]*營地\((\d*)/);
+    reRemaining = new RegExp(/向陽營地[^營]*營位\((\d*)/);
     reApplying = new RegExp(/向陽營地[^目]*目前報名 : (\d*)/);
     break;
   }
