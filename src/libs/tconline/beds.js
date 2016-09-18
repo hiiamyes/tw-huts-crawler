@@ -4,7 +4,7 @@ let co = require('co');
 let rp = require('request-promise');
 let _ = require('lodash');
 
-const huts = _.keyBy(require('./huts.json'), 'nameZh');
+const huts = _.keyBy(require('./huts.json'), 'name');
 
 const getBeds = co.wrap(function* (year, month) {
 
