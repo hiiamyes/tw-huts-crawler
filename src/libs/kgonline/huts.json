@@ -2,10 +2,12 @@
 	"name": "檜谷山莊",
 	"url": "http://kgonline.forest.gov.tw/room/",
 	"size": 42,
+	"admin": "kgonline",
 	"available": true
 },{
 	"name": "檜谷營地",
 	"url": "http://kgonline.forest.gov.tw/room/",
 	"size": 15,
+	"admin": "kgonline",
 	"available": true
 }]
