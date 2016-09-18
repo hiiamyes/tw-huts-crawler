@@ -1,0 +1,195 @@
+[{
+	"nameEn": "Qika Hut",
+	"name": "七卡山莊",
+	"rooms": 10,
+	"admin": "sheipa",
+	"size": 130,
+	"available": true
+},{
+	"nameEn": "Qika Campground",
+	"name": "七卡營地",
+	"rooms": 11,
+	"admin": "sheipa",
+	"size": 10,
+	"available": true
+},{
+	"nameEn": "Sancha Campground",
+	"name": "三叉營地",
+	"rooms": 61,
+	"admin": "sheipa",
+	"size": 6,
+	"available": true
+},{
+	"nameEn": "Saliujiu Hut",
+	"name": "三六九山莊",
+	"rooms": 13,
+	"admin": "sheipa",
+	"size": 106,
+	"available": true
+},{
+	"nameEn": "Huoshihshansia Campground",
+	"name": "火石山下營地",
+	"rooms": 51,
+	"admin": "sheipa",
+	"size": 6,
+	"available": true
+},{
+	"nameEn": "Wanmeigu Campground",
+	"name": "完美谷營地",
+	"rooms": 31,
+	"admin": "sheipa",
+	"size": 6,
+	"available": true
+},{
+	"nameEn": "Youpolan Campground",
+	"name": "油婆蘭營地",
+	"rooms": 28,
+	"admin": "sheipa",
+	"size": 10,
+	"available": true
+},{
+	"nameEn": "Taoshan Hut",
+	"name": "桃山山屋",
+	"rooms": 58,
+	"admin": "sheipa",
+	"size": 19,
+	"available": true
+},{
+	"nameEn": "Taoshan Campground",
+	"name": "桃山營地",
+	"rooms": 59,
+	"admin": "sheipa",
+	"size": 2,
+	"available": true
+},{
+	"nameEn": "Sumida Shelter",
+	"name": "素密達山屋",
+	"rooms": 83,
+	"admin": "sheipa",
+	"size": 24,
+	"available": true
+},{
+	"nameEn": "Mayang Mountain Campground",
+	"name": "馬洋山前營地",
+	"rooms": 75,
+	"admin": "sheipa",
+	"size": 8,
+	"available": true
+},{
+	"nameEn": "Mayang Pond Campground",
+	"name": "馬洋池營地",
+	"rooms": 78,
+	"admin": "sheipa",
+	"size": 8,
+	"available": true
+},{
+	"nameEn": "Former Site of Syueshan Cabin Campground",
+	"name": "雪山山莊舊址營地",
+	"rooms": 24,
+	"admin": "sheipa",
+	"size": 6,
+	"available": true
+},{
+	"nameEn": "Syuebei Shelter",
+	"name": "雪北山屋",
+	"rooms": 85,
+	"admin": "sheipa",
+	"size": 25,
+	"available": true
+},{
+	"nameEn": "Xinda Hut",
+	"name": "新達山屋",
+	"rooms": 63,
+	"admin": "sheipa",
+	"size": 34,
+	"available": true
+},{
+	"nameEn": "Xinda Campground",
+	"name": "新達營地",
+	"rooms": 64,
+	"available": true
+},{
+	"nameEn": "Cuei Pond Shelter",
+	"name": "翠池山屋",
+	"rooms": 17,
+	"admin": "sheipa",
+	"size": 12,
+	"available": true
+},{
+	"nameEn": "Cuei Pond Campground",
+	"name": "翠池營地",
+	"rooms": 18,
+	"admin": "sheipa",
+	"size": 5,
+	"available": true
+},{
+	"nameEn": "Piaodan Hut Campground",
+	"name": "瓢簞營地",
+	"rooms": 21,
+	"admin": "sheipa",
+	"size": 8,
+	"available": true
+},{
+	"nameEn": "Sailiangjiou Campground",
+	"name": "賽良久營地",
+	"rooms": 20,
+	"admin": "sheipa",
+	"size": 4,
+	"available": true
+},{
+	"nameEn": "Banan Hut",
+	"name": "霸南山屋",
+	"rooms": 79,
+	"admin": "sheipa",
+	"size": 15,
+	"available": true
+},{
+	"nameEn": "Heishuitang Cabin",
+	"name": "黑水塘山屋",
+	"rooms": 124,
+	"admin": "taroko",
+	"size": 10,
+	"available": true
+},{
+	"nameEn": "Cheng Gong Cabin",
+	"name": "成功山屋",
+	"rooms": 125,
+	"admin": "taroko",
+	"size": 34,
+	"available": true
+},{
+	"nameEn": "Cheng Gong Cabin No.2",
+	"name": "成功二號堡",
+	"rooms": 126,
+	"admin": "taroko",
+	"size": 10,
+	"available": true
+},{
+	"nameEn": "Qilai Cabin",
+	"name": "奇萊山屋",
+	"rooms": 127,
+	"admin": "taroko",
+	"size": 8,
+	"available": true
+},{
+	"nameEn": "Yuleng Cabin",
+	"name": "雲稜山屋",
+	"rooms": 149,
+	"admin": "taroko",
+	"size": 55,
+	"available": true
+},{
+	"nameEn": "Shenmazhen Cabin",
+	"name": "審馬陣山屋",
+	"rooms": 151,
+	"admin": "taroko",
+	"size": 12,
+	"available": true
+},{
+	"nameEn": "Nanhu Cabin",
+	"name": "南湖山屋",
+	"rooms": 152,
+	"admin": "taroko",
+	"size": 40,
+	"available": true
+}]

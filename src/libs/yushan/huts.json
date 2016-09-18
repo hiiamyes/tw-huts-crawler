@@ -1,0 +1,204 @@
+[{
+	"nameEn": "Paiyun Lodge",
+	"name": "排雲山莊",
+	"admin": "yushan",
+	"capacity": 92,
+	"available": true,
+	"ddlLocation": 1
+},{
+	"nameEn": "Yuanfong Cabin",
+	"name": "圓峰山屋",
+	"admin": "yushan",
+	"capacity": 15,
+	"available": true,
+	"ddlLocation": 136
+},{
+	"nameEn": "Yuanfong Campground",
+	"name": "圓峰營地",
+	"admin": "yushan",
+	"capacity": 9,
+	"available": true,
+	"ddlLocation": 136
+},{
+	"nameEn": "LeLe Cabin",
+	"name": "樂樂山屋",
+	"admin": "yushan",
+	"capacity": 12,
+	"available": true,
+	"ddlLocation": 5
+},{
+	"nameEn": "Banaiyike Campground",
+	"name": "巴奈伊克營地",
+	"admin": "yushan",
+	"capacity": 12,
+	"available": true,
+	"ddlLocation": 7
+},{
+	"nameEn": "Jhongyang Mine Cabin",
+	"name": "中央金礦山屋",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 8
+},{
+	"nameEn": "Baiyang Mine Cabin",
+	"name": "白洋金礦山屋",
+	"admin": "yushan",
+	"capacity": 12,
+	"available": true,
+	"ddlLocation": 9
+},{
+	"nameEn": "Baiyang Mine Campground",
+	"name": "白洋金礦營地",
+	"admin": "yushan",
+	"capacity": 8,
+	"available": true,
+	"ddlLocation": 9
+},{
+	"nameEn": "Dujyuan Campground",
+	"name": "杜鵑營地",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 10
+},{
+	"nameEn": "Nan Campground",
+	"name": "南營地",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 11
+},{
+	"nameEn": "Dashueiku Cabin",
+	"name": "大水窟山屋",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 12
+},{
+	"nameEn": "Tafen Valley Cabin",
+	"name": "塔芬谷山屋",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 14
+},{
+	"nameEn": "Lulu Valley Cabin",
+	"name": "轆轆谷山屋",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 19
+},{
+	"nameEn": "Yunfong Sancha Campground",
+	"name": "雲峰下三叉營地",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 17
+},{
+	"nameEn": "Lakuyin River Cabin",
+	"name": "拉庫音溪底山屋",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 16
+},{
+	"nameEn": "Mabolasih Cabin",
+	"name": "馬博前山屋",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 28
+},{
+	"nameEn": "Malijianan Cabin",
+	"name": "馬利加南東峰前山屋",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 29
+},{
+	"nameEn": "Mabu Valley Cabin",
+	"name": "馬布谷山屋",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 30
+},{
+	"nameEn": "Jiasin Camp",
+	"name": "佳心營地",
+	"admin": "yushan",
+	"capacity": 24,
+	"available": true,
+	"ddlLocation": 27
+},{
+	"nameEn": "Walami Cabin",
+	"name": "瓦拉米山屋",
+	"admin": "yushan",
+	"capacity": 24,
+	"available": true,
+	"ddlLocation": 26
+},{
+	"nameEn": "Walami Campground",
+	"name": "瓦拉米營地",
+	"admin": "yushan",
+	"capacity": 24,
+	"available": true,
+	"ddlLocation": 26
+},{
+	"nameEn": "Baoyat Cabin",
+	"name": "抱崖山屋",
+	"admin": "yushan",
+	"capacity": 16,
+	"available": true,
+	"ddlLocation": 25
+},{
+	"nameEn": "Baoyat Campground",
+	"name": "抱崖營地",
+	"admin": "yushan",
+	"capacity": 4,
+	"available": true,
+	"ddlLocation": 25
+},{
+	"nameEn": "Duomeili Campground",
+	"name": "多美麗營地",
+	"admin": "yushan",
+	"capacity": 12,
+	"available": true,
+	"ddlLocation": 24
+},{
+	"nameEn": "Dafen Cabin",
+	"name": "大分山屋",
+	"admin": "yushan",
+	"capacity": 12,
+	"available": true,
+	"ddlLocation": 23
+},{
+	"nameEn": "Tuomasih Campground",
+	"name": "托馬斯營地",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 36
+},{
+	"nameEn": "Kuhanuosin Cabin",
+	"name": "庫哈諾辛山屋",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 20
+},{
+	"nameEn": "Mt. Lianli Front (Taoyuan) Campground",
+	"name": "連理山前(桃源)營地",
+	"admin": "yushan",
+	"capacity": 20,
+	"available": true,
+	"ddlLocation": 21
+},{
+	"nameEn": "Mt. Sinsian Front Camp",
+	"name": "新仙山前營地",
+	"admin": "yushan",
+	"capacity": 22,
+	"available": true,
+	"ddlLocation": 22
+}]

@@ -1,0 +1,27 @@
+{
+  "name": "tw-huts-be-crawler",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=development node src/app.js",
+    "start:prod": "NODE_ENV=production node src/app.js",
+    "deploy": "scp -r ./src package.json root@139.162.47.241:/srv/tw-huts/crawler/dev",
+    "deploy:prod": "scp -r ./src package.json root@139.162.47.241:/srv/tw-huts/crawler/prod"
+  },
+  "author": "yes",
+  "dependencies": {
+    "asyncawait": "^1.0.6",
+    "axios": "^0.13.1",
+    "bluebird": "^3.4.6",
+    "cheerio": "^0.20.0",
+    "co": "^4.6.0",
+    "elasticsearch": "^11.0.1",
+    "form-data": "^1.0.1",
+    "lodash": "^4.15.0",
+    "moment": "^2.13.0",
+    "mongodb": "^2.1.18",
+    "request": "^2.72.0",
+    "request-promise": "^4.1.1"
+  }
+}
