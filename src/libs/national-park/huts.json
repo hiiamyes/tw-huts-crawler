@@ -3,6 +3,7 @@
 	"name": "七卡山莊",
 	"rooms": 10,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 130,
 	"available": true
 },{
@@ -10,6 +11,7 @@
 	"name": "七卡營地",
 	"rooms": 11,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 10,
 	"available": true
 },{
@@ -17,6 +19,7 @@
 	"name": "三叉營地",
 	"rooms": 61,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 6,
 	"available": true
 },{
@@ -24,6 +27,7 @@
 	"name": "三六九山莊",
 	"rooms": 13,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 106,
 	"available": true
 },{
@@ -31,6 +35,7 @@
 	"name": "火石山下營地",
 	"rooms": 51,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 6,
 	"available": true
 },{
@@ -38,6 +43,7 @@
 	"name": "完美谷營地",
 	"rooms": 31,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 6,
 	"available": true
 },{
@@ -45,6 +51,7 @@
 	"name": "油婆蘭營地",
 	"rooms": 28,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 10,
 	"available": true
 },{
@@ -52,6 +59,7 @@
 	"name": "桃山山屋",
 	"rooms": 58,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 19,
 	"available": true
 },{
@@ -59,6 +67,7 @@
 	"name": "桃山營地",
 	"rooms": 59,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 2,
 	"available": true
 },{
@@ -66,6 +75,7 @@
 	"name": "素密達山屋",
 	"rooms": 83,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 24,
 	"available": true
 },{
@@ -73,6 +83,7 @@
 	"name": "馬洋山前營地",
 	"rooms": 75,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 8,
 	"available": true
 },{
@@ -80,6 +91,7 @@
 	"name": "馬洋池營地",
 	"rooms": 78,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 8,
 	"available": true
 },{
@@ -87,6 +99,7 @@
 	"name": "雪山山莊舊址營地",
 	"rooms": 24,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 6,
 	"available": true
 },{
@@ -94,6 +107,7 @@
 	"name": "雪北山屋",
 	"rooms": 85,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 25,
 	"available": true
 },{
@@ -101,18 +115,23 @@
 	"name": "新達山屋",
 	"rooms": 63,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 34,
 	"available": true
 },{
 	"nameEn": "Xinda Campground",
 	"name": "新達營地",
 	"rooms": 64,
+	"admin": "sheipa",
+	"url": "https://npm.cpami.gov.tw/bed_1.aspx",
+	"size": 6,
 	"available": true
 },{
 	"nameEn": "Cuei Pond Shelter",
 	"name": "翠池山屋",
 	"rooms": 17,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 12,
 	"available": true
 },{
@@ -120,6 +139,7 @@
 	"name": "翠池營地",
 	"rooms": 18,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 5,
 	"available": true
 },{
@@ -127,6 +147,7 @@
 	"name": "瓢簞營地",
 	"rooms": 21,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 8,
 	"available": true
 },{
@@ -134,6 +155,7 @@
 	"name": "賽良久營地",
 	"rooms": 20,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 4,
 	"available": true
 },{
@@ -141,6 +163,7 @@
 	"name": "霸南山屋",
 	"rooms": 79,
 	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 15,
 	"available": true
 },{
@@ -148,6 +171,7 @@
 	"name": "黑水塘山屋",
 	"rooms": 124,
 	"admin": "taroko",
+  "url": "https://npm.cpami.gov.tw/bed_4.aspx",
 	"size": 10,
 	"available": true
 },{
@@ -155,6 +179,7 @@
 	"name": "成功山屋",
 	"rooms": 125,
 	"admin": "taroko",
+  "url": "https://npm.cpami.gov.tw/bed_4.aspx",
 	"size": 34,
 	"available": true
 },{
@@ -162,6 +187,7 @@
 	"name": "成功二號堡",
 	"rooms": 126,
 	"admin": "taroko",
+  "url": "https://npm.cpami.gov.tw/bed_4.aspx",
 	"size": 10,
 	"available": true
 },{
@@ -169,6 +195,7 @@
 	"name": "奇萊山屋",
 	"rooms": 127,
 	"admin": "taroko",
+  "url": "https://npm.cpami.gov.tw/bed_4.aspx",
 	"size": 8,
 	"available": true
 },{
@@ -176,6 +203,7 @@
 	"name": "雲稜山屋",
 	"rooms": 149,
 	"admin": "taroko",
+  "url": "https://npm.cpami.gov.tw/bed_4.aspx",
 	"size": 55,
 	"available": true
 },{
@@ -183,6 +211,7 @@
 	"name": "審馬陣山屋",
 	"rooms": 151,
 	"admin": "taroko",
+  "url": "https://npm.cpami.gov.tw/bed_4.aspx",
 	"size": 12,
 	"available": true
 },{
@@ -190,6 +219,7 @@
 	"name": "南湖山屋",
 	"rooms": 152,
 	"admin": "taroko",
+  "url": "https://npm.cpami.gov.tw/bed_4.aspx",
 	"size": 40,
 	"available": true
 }]
