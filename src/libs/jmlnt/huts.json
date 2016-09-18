@@ -2,20 +2,24 @@
 	"name": "向陽山屋",
 	"url": "http://jmlnt.forest.gov.tw/room/",
 	"size": 70,
+	"admin": "jmlnt",
 	"available": true
 },{
 	"name": "向陽營地",
 	"url": "http://jmlnt.forest.gov.tw/room/camp.php",
 	"size": 25,
+	"admin": "jmlnt",
 	"available": true
 },{
 	"name": "嘉明湖山屋",
 	"url": "http://jmlnt.forest.gov.tw/room/",
 	"size": 70,
+	"admin": "jmlnt",
 	"available": true
 },{
 	"name": "嘉明湖營地",
 	"url": "http://jmlnt.forest.gov.tw/room/",
 	"size": 6,
+	"admin": "jmlnt",
 	"available": true
 }]
