@@ -1,0 +1,25 @@
+{
+  "apps": [{
+    "name": "crawler-dev",
+    "exec_mode": "cluster",
+    "instances": 1,
+    "script": "src/scripts/update-beds.js",
+    "watch": true,
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "cron_restart": "*/2 * * * *",
+    "log_date_format": "YYYY-MM-DD HH:mm Z"
+  },{
+    "name": "crawler-prod",
+    "exec_mode": "cluster",
+    "instances": 1,
+    "script": "src/scripts/update-beds.js",
+    "watch": true,
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "cron_restart": "*/2 * * * *",
+    "log_date_format": "YYYY-MM-DD HH:mm Z"
+  }]
+}

@@ -1,13 +1,12 @@
 {
-  "name": "tw-huts-be-crawler",
+  "name": "tw-huts-crawler",
   "version": "0.0.1",
   "description": "",
-  "main": "app.js",
   "scripts": {
-    "start": "NODE_ENV=development node src/app.js",
-    "start:prod": "NODE_ENV=production node src/app.js",
-    "deploy": "scp -r ./src package.json root@139.162.47.241:/srv/tw-huts/crawler/dev",
-    "deploy:prod": "scp -r ./src package.json root@139.162.47.241:/srv/tw-huts/crawler/prod"
+    "huts": "NODE_ENV=development node src/scripts/update-huts.js",
+    "huts:prod": "NODE_ENV=production node src/scripts/update-huts.js",
+    "beds": "pm2 start pm2.json --only crawler-dev",
+    "beds:prod": "pm2 start pm2.json --only crawler-prod"
   },
   "author": "yes",
   "dependencies": {
