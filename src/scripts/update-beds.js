@@ -6,6 +6,7 @@ var nationalParkBeds = require('../libs/national-park/beds');
 var jmlntBeds = require('../libs/jmlnt/beds');
 var kgonlineBeds = require('../libs/kgonline/beds');
 var tconlineBeds = require('../libs/tconline/beds');
+var yuShanBeds = require('../libs/yushan/beds');
 
 const updateDB = (db, hut, beds) => {
   return db
@@ -22,7 +23,6 @@ const updateDB = (db, hut, beds) => {
 }
 
 const crawler = co.wrap( function* (db, hut){
-  // console.log(`${hut.name}: crawler start`);
   try {
     let beds;
     switch (hut.admin) {
@@ -42,7 +42,8 @@ const crawler = co.wrap( function* (db, hut){
         beds = yield jmlntBeds.get(hut.name);
         break;
       case 'yushan':
-        return
+        beds = yield yuShanBeds.get(hut.name);
+        break;
     }
     if (beds) {
       yield updateDB(db, hut, beds);
