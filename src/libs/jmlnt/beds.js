@@ -95,10 +95,9 @@ const getBeds = co.wrap(function* (name) {
   }).get();
 
   beds = bedsThisMonth.concat(bedsNextMonth, bedsNextNextMonth)
-  let bedsObject = _.keyBy(beds, 'date');
+  const bedsObject = _.keyBy(beds, 'date');
   const dayCount = moment(beds[beds.length - 1].date).diff(moment(beds[0].date), 'day') + 1;
   const firstDate = beds[0].date;
-  bedsObject = _.omit(bedsObject, '2016-11-25', '2016-11-26');
   beds = [];
   for (var i = 0; i < dayCount; i++) {
     beds.push(

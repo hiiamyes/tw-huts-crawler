@@ -60,8 +60,21 @@ const getBeds = co.wrap(function* (name){
 	$ = cheerio.load(body);
 	bedsNextNextMonth = parse($, name);
 
-	beds = bedsThisMonth.concat(bedsNextMonth, bedsNextNextMonth);
-	return _.keyBy(beds, 'date');
+	beds = bedsThisMonth.concat(bedsNextMonth, bedsNextNextMonth)
+  const bedsObject = _.keyBy(beds, 'date');
+  const dayCount = moment(beds[beds.length - 1].date).diff(moment(beds[0].date), 'day') + 1;
+  const firstDate = beds[0].date;
+  beds = [];
+  for (var i = 0; i < dayCount; i++) {
+    beds.push(
+      bedsObject[moment(firstDate).add(i, 'day').format('YYYY-MM-DD')] ||
+      {
+        date: moment(firstDate).add(i, 'day').format('YYYY-MM-DD'),
+        remaining: 0,
+        applying: 0
+      })
+  }
+  return beds
 })
 
 exports.get = getBeds;

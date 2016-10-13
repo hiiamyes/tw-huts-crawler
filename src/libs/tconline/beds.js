@@ -29,8 +29,8 @@ const getBeds = co.wrap(function* (year, month) {
     if (remaining) {
       return {
         date: moment(`${year}-${month}-${table.find('font[color="red"]').text()}`, 'YYYY-M-DD').format('YYYY-MM-DD'),
-        remaining,
-        applying
+        remaining: Number.parseInt(remaining),
+        applying: Number.parseInt(applying)
       }
     }
   }).get();
@@ -52,6 +52,19 @@ exports.get = co.wrap(function* () {
     ('0' + (moment().add(2, 'M').month() + 1)).slice(-2)
   );
 
-  const beds = bedsThisMonth.concat(bedsNextMonth, bedsNextNextMonth)
-  return _.keyBy(beds, 'date');
+  beds = bedsThisMonth.concat(bedsNextMonth, bedsNextNextMonth)
+  const bedsObject = _.keyBy(beds, 'date');
+  const dayCount = moment(beds[beds.length - 1].date).diff(moment(beds[0].date), 'day') + 1;
+  const firstDate = beds[0].date;
+  beds = [];
+  for (var i = 0; i < dayCount; i++) {
+    beds.push(
+      bedsObject[moment(firstDate).add(i, 'day').format('YYYY-MM-DD')] ||
+      {
+        date: moment(firstDate).add(i, 'day').format('YYYY-MM-DD'),
+        remaining: 0,
+        applying: 0
+      })
+  }
+  return beds
 })

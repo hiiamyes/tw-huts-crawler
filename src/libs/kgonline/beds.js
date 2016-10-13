@@ -7,7 +7,6 @@ let _ = require('lodash');
 const huts = _.keyBy(require('./huts.json'), 'name');
 
 const getBeds = co.wrap(function* (name) {
-
   let uri, body, $, year, month, csrf, bedsThisMonth, bedsNextMonth, bedsNextNextMonth, beds, reRemaining, reApplying;
 
   uri = huts[name].url;
@@ -35,8 +34,8 @@ const getBeds = co.wrap(function* (name) {
       // 往下找 font color = red 的代表日期
       date: moment(`${year}-${month}-${table.find('font[color="red"]').text()}`, 'YYYY-M-DD').format('YYYY-MM-DD'),
       // 往下找出 cendle_table 的 text，用 regex 爬出剩餘床位和申請人數
-      remaining: reRemaining.exec(table.find('td.cendle_table').text())[1],
-      applying: reApplying.exec(table.find('td.cendle_table').text())[1],
+      remaining: Number.parseInt(eRemaining.exec(table.find('td.cendle_table').text())[1]),
+      applying: Number.parseInt(reApplying.exec(table.find('td.cendle_table').text())[1]),
     }
   }).get();
 
@@ -59,8 +58,8 @@ const getBeds = co.wrap(function* (name) {
     const table = $(el).closest('table');
     return {
       date: moment(`${year}-${month}-${table.find('font[color="red"]').text()}`, 'YYYY-M-DD').format('YYYY-MM-DD'),
-      remaining: reRemaining.exec(table.find('td.cendle_table').text())[1],
-      applying: reApplying.exec(table.find('td.cendle_table').text())[1],
+      remaining: Number.parseInt(reRemaining.exec(table.find('td.cendle_table').text())[1]),
+      applying: Number.parseInt(reApplying.exec(table.find('td.cendle_table').text())[1]),
     }
   }).get();
 
@@ -81,13 +80,26 @@ const getBeds = co.wrap(function* (name) {
     const table = $(el).closest('table');
     return {
       date: moment(`${year}-${month}-${table.find('font[color="red"]').text()}`, 'YYYY-M-DD').format('YYYY-MM-DD'),
-      remaining: reRemaining.exec(table.find('td.cendle_table').text())[1],
-      applying: reApplying.exec(table.find('td.cendle_table').text())[1],
+      remaining: Number.parseInt(reRemaining.exec(table.find('td.cendle_table').text())[1]),
+      applying: Number.parseInt(reApplying.exec(table.find('td.cendle_table').text())[1]),
     }
   }).get();
 
   beds = bedsThisMonth.concat(bedsNextMonth, bedsNextNextMonth)
-  return _.keyBy(beds, 'date')
+  const bedsObject = _.keyBy(beds, 'date');
+  const dayCount = moment(beds[beds.length - 1].date).diff(moment(beds[0].date), 'day') + 1;
+  const firstDate = beds[0].date;
+  beds = [];
+  for (var i = 0; i < dayCount; i++) {
+    beds.push(
+      bedsObject[moment(firstDate).add(i, 'day').format('YYYY-MM-DD')] ||
+      {
+        date: moment(firstDate).add(i, 'day').format('YYYY-MM-DD'),
+        remaining: 0,
+        applying: 0
+      })
+  }
+  return beds
 })
 
 exports.get = getBeds;
