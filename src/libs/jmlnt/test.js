@@ -6,5 +6,7 @@ let beds = require('./beds.js')
 // .catch(err => console.log(err))
 
 beds.get('向陽山屋')
-.then(res => console.log(res))
+.then(res => {
+  console.log(res)
+})
 .catch(err => console.log(err))
