@@ -84,8 +84,8 @@ const getBeds = async ((name) => {
   let ASPState = await (getASPState(name));
   let thisMonth = await (getBedStatus({ASPState, name, monthOffset: 0}));
   let nextMonth = await (getBedStatus({ASPState: thisMonth.ASPState, name, monthOffset: 1}))
-  thisMonthBeds = await (parser(thisMonth.$));
-  nextMonthBeds = await (parser(nextMonth.$));
+  let thisMonthBeds = await (parser(thisMonth.$));
+  let nextMonthBeds = await (parser(nextMonth.$));
   return thisMonthBeds.concat(nextMonthBeds);
 })
 

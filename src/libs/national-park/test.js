@@ -4,4 +4,4 @@ let beds = require('./beds.js')
 // 31 + 7
 // huts.get().then(res => console.log(res))
 
-beds.get('南湖山屋').then(res => console.log(res));
+beds.get('七卡山莊').then(res => console.log(res));

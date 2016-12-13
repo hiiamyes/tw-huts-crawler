@@ -1,4 +1,32 @@
-[{
+[
+{
+	"nameEn": "Campground of Madara Creek Trailhead",
+	"name": "馬達拉溪登山口宿營地",
+	"rooms": 67,
+	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
+	"size": 10,
+	"available": true
+},
+{
+	"nameEn": "Jiujiu Hut",
+	"name": "九九山莊",
+	"rooms": 68,
+	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
+	"size": 100,
+	"available": true
+},
+{
+	"nameEn": "Jhongba Hut",
+	"name": "中霸山屋",
+	"rooms": 304,
+	"admin": "sheipa",
+  "url": "https://npm.cpami.gov.tw/bed_1.aspx",
+	"size": 12,
+	"available": true
+},
+{
 	"nameEn": "Qika Hut",
 	"name": "七卡山莊",
 	"rooms": 10,
@@ -37,7 +65,7 @@
 	"admin": "sheipa",
   "url": "https://npm.cpami.gov.tw/bed_1.aspx",
 	"size": 6,
-	"available": true
+	"available": false
 },{
 	"nameEn": "Wanmeigu Campground",
 	"name": "完美谷營地",
@@ -222,4 +250,5 @@
   "url": "https://npm.cpami.gov.tw/bed_4.aspx",
 	"size": 40,
 	"available": true
-}]
+}
+]

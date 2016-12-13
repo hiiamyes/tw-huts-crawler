@@ -17,7 +17,11 @@ const updateDB = (db, hut) => {
 co(function* (){
   console.log('save huts');
 
-  let db = yield MongoClient.connect(process.env.NODE_ENV === 'production' ? 'mongodb://localhost:27017/tw-huts' : 'mongodb://localhost:27017/tw-huts-dev');
+  let db = yield MongoClient.connect(
+    process.env.NODE_ENV === 'production' ?
+    'mongodb://yes:yes@hiiamyes.com:27017/tw-huts' :
+    'mongodb://yes:yes@hiiamyes.com:27017/tw-huts-dev'
+  );
 
   yield require('../libs/national-park/huts.json').map( hut => updateDB(db, hut) );
   yield require('../libs/yushan/huts.json').map( hut => updateDB(db, hut) );

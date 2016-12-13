@@ -11,10 +11,17 @@
 
 ## Usage
 
-### Development
-* `npm run huts`
-* `npm run beds`
-
-### Production
-* `npm run huts:prod`
-* `npm run beds:prod`
+<table>
+  <tr>
+    <td>`npm run huts`</td>
+  </tr>
+  <tr>
+    <td>`npm run beds`</td>
+  </tr>
+  <tr>
+    <td>`npm run huts:prod`</td>
+  </tr>
+  <tr>
+    <td>`npm run beds:prod`</td>
+  </tr>
+</table>

@@ -34,7 +34,7 @@ const getBeds = co.wrap(function* (name) {
       // 往下找 font color = red 的代表日期
       date: moment(`${year}-${month}-${table.find('font[color="red"]').text()}`, 'YYYY-M-DD').format('YYYY-MM-DD'),
       // 往下找出 cendle_table 的 text，用 regex 爬出剩餘床位和申請人數
-      remaining: Number.parseInt(eRemaining.exec(table.find('td.cendle_table').text())[1]),
+      remaining: Number.parseInt(reRemaining.exec(table.find('td.cendle_table').text())[1]),
       applying: Number.parseInt(reApplying.exec(table.find('td.cendle_table').text())[1]),
     }
   }).get();

@@ -14,10 +14,11 @@ const parse = ($, name) => {
 	return $('font[color="#FF6600"]').map( (i, el) => { // 找有入宿數字的欄位
 		const td = $(el).closest('td'); // 往上找到代表欄位的 td
 		const monthDate = td.find('a').attr('title'); // 往下找第一個 a 有日期
+		const going = td.find(`font[color="${approvedColor}"]`).text();
 		return {
 			date: moment(`${year}-${monthDate}`, 'YYYY-M月D日').format('YYYY-MM-DD'),
-			remaining: size - Number.parseInt(td.find(`font[color="${approvedColor}"]`).text()), // 往下找 font color = #FF6600 的代表床位
-			applying: td.find('font[color="#0000C0"]').text(), // 往下找 font color = #0000C0 的代表排隊
+			remaining: size - Number.parseInt(td.find(`font[color="${approvedColor}"]`).text() || '0'), // 往下找 font color = #FF6600 的代表床位
+			applying: Number.parseInt(td.find('font[color="#0000C0"]').text() || '0'), // 往下找 font color = #0000C0 的代表排隊
 		}
 		return $(el).text()
 	}).get()
@@ -63,15 +64,29 @@ const getBeds = co.wrap(function* (name){
 	beds = bedsThisMonth.concat(bedsNextMonth, bedsNextNextMonth)
 	if (beds.length !== 0) {
 		const bedsObject = _.keyBy(beds, 'date');
-	  const dayCount = moment(beds[beds.length - 1].date).diff(moment(beds[0].date), 'day') + 1;
+	  // const dayCount = moment(beds[beds.length - 1].date).diff(moment(beds[0].date), 'day') + 1;
+		const dayCount = 30;
 	  const firstDate = beds[0].date;
+		const size = huts[name].size;
 	  beds = [];
 	  for (var i = 0; i < dayCount; i++) {
 	    beds.push(
 	      bedsObject[moment(firstDate).add(i, 'day').format('YYYY-MM-DD')] ||
 	      {
 	        date: moment(firstDate).add(i, 'day').format('YYYY-MM-DD'),
-	        remaining: 0,
+	        remaining: size,
+	        applying: 0
+	      })
+	  }
+	}else {
+		const firstDate = moment().add(7,'d').format();
+		const dayCount = 30;
+		const size = huts[name].size;
+		for (var i = 0; i < dayCount; i++) {
+	    beds.push(
+	      {
+	        date: moment(firstDate).add(i, 'day').format('YYYY-MM-DD'),
+	        remaining: size,
 	        applying: 0
 	      })
 	  }

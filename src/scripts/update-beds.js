@@ -8,6 +8,15 @@ var kgonlineBeds = require('../libs/kgonline/beds');
 var tconlineBeds = require('../libs/tconline/beds');
 var yuShanBeds = require('../libs/yushan/beds');
 
+const crawlers = {
+  sheipa: nationalParkBeds,
+  taroko: nationalParkBeds,
+  tconline: tconlineBeds,
+  kgonline: kgonlineBeds,
+  jmlnt: jmlntBeds,
+  yushan: yuShanBeds
+}
+
 const updateDB = (db, hut, beds) => {
   return db
     .collection('huts')
@@ -24,27 +33,7 @@ const updateDB = (db, hut, beds) => {
 
 const crawler = co.wrap( function* (db, hut){
   try {
-    let beds;
-    switch (hut.admin) {
-      case 'sheipa':
-        beds = yield nationalParkBeds.get(hut.name);
-        break
-      case 'taroko':
-        beds = yield nationalParkBeds.get(hut.name);
-        break;
-      case 'tconline':
-        beds = yield tconlineBeds.get(hut.name);
-        break
-      case 'kgonline':
-        beds = yield kgonlineBeds.get(hut.name);
-        break
-      case 'jmlnt':
-        beds = yield jmlntBeds.get(hut.name);
-        break;
-      case 'yushan':
-        beds = yield yuShanBeds.get(hut.name);
-        break;
-    }
+    const beds = yield crawlers[hut.admin].get(hut.name);
     if (beds) {
       yield updateDB(db, hut, beds);
       console.log(`${hut.name}: crawler success`);
@@ -58,10 +47,14 @@ const crawler = co.wrap( function* (db, hut){
 
 co(function* (){
   console.log('save beds');
-  var db = yield MongoClient.connect(process.env.NODE_ENV === 'production' ? 'mongodb://localhost:27017/tw-huts' : 'mongodb://localhost:27017/tw-huts-dev');
+  let db = yield MongoClient.connect(
+    process.env.NODE_ENV === 'production' ?
+    require('../../keys/db-url.json').prod :
+    require('../../keys/db-url.json').dev
+  );
 
   var huts = yield db.collection('huts').find().toArray();
-  yield huts.map( hut => crawler(db, hut) );
+  yield huts.map( hut => hut.available ? crawler(db, hut) : null );
 
   db.close();
   console.log('save beds done');
