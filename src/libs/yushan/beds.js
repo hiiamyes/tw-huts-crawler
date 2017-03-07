@@ -9,12 +9,20 @@ const huts = _.keyBy(require('./huts.json'), 'name');
 const parse = ($, name) => {
 	const year = /(\d*)年/g.exec($('table#ctl00_ContentPlaceHolder1_CalendarReport td[align="center"]').text())[1];
 	const approvedColor = name.indexOf('營地') === -1 ? '#FF6600' : '#009933';
-	const size = huts[name].size;
+
+	let size = huts[name].size;
 
 	return $('font[color="#FF6600"]').map( (i, el) => { // 找有入宿數字的欄位
 		const td = $(el).closest('td'); // 往上找到代表欄位的 td
 		const monthDate = td.find('a').attr('title'); // 往下找第一個 a 有日期
 		const going = td.find(`font[color="${approvedColor}"]`).text();
+
+		// special rule for size before 2017 3/31
+		const date = moment(`${year}-${monthDate}`, 'YYYY-M月D日')
+		if (date.isBefore('2017-03-31')) {
+			size = 92;
+		}
+		
 		return {
 			date: moment(`${year}-${monthDate}`, 'YYYY-M月D日').format('YYYY-MM-DD'),
 			remaining: size - Number.parseInt(td.find(`font[color="${approvedColor}"]`).text() || '0'), // 往下找 font color = #FF6600 的代表床位
