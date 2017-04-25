@@ -1,11 +1,13 @@
 [{
 	"name": "檜谷山莊",
+	"nameEn": "Kuaigu Cabin",
 	"url": "http://kgonline.forest.gov.tw/room/",
 	"size": 42,
 	"admin": "kgonline",
 	"available": true
 },{
 	"name": "檜谷營地",
+	"nameEn": "Kuaigu Campground",
 	"url": "http://kgonline.forest.gov.tw/room/",
 	"size": 15,
 	"admin": "kgonline",
